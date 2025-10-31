@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+    --default-font-family: Geist, sans-serif;
+    --font-mono: JetBrains Mono;
+
+    /* Custom zinc palette - subtle dark backgrounds with light text */
+
+    --color-zinc-950: #0f0f11; /* Main background */
+    --color-zinc-900: #131316; /* Sidebar background (very subtle difference) */
+    --color-zinc-850: #18121b; /* Card/elevated background */
+    --color-zinc-800: #27272a; /* Borders */
+    --color-zinc-700: #353546; /* Hover states */
+    --color-zinc-600: #52525b; /* Active/interactive */
+    --color-zinc-500: #71717a; /* Muted text */
+    --color-zinc-400: #a1a1aa; /* Secondary text */
+    --color-zinc-300: #d4d4d8; /* Primary text */
+    --color-zinc-200: #e4e4e7; /* Bright text */
+    --color-zinc-50:  #fafafa; /* Brightest highlights */
+
+
+}
+
+@layer base {
+    body {
+        @apply bg-zinc-950 text-zinc-100 antialiased;
+    }
+}
