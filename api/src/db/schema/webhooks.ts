@@ -12,5 +12,5 @@ export const webhooks = pgTable('webhooks', {
     queryParams: jsonb().$type<Record<string, string>>(),
     headers: jsonb().$type<Record<string, string>>().notNull(),
     body: text(),
-    createAt: timestamp().notNull().defaultNow(),
+    createdAt: timestamp().notNull().defaultNow(),
 })

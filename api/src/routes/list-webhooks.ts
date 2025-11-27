@@ -22,7 +22,7 @@ export const listWebhook: FastifyPluginAsyncZod  = async (app) => {
                             id: true,
                             method: true,
                             pathname: true,
-                            createAt: true
+                            createdAt: true
                         })
                     ),
                     nextCursor: z.string().nullable(),
@@ -40,7 +40,7 @@ export const listWebhook: FastifyPluginAsyncZod  = async (app) => {
                     id: webhooks.id,
                     method: webhooks.method,
                     pathname: webhooks.pathname,
-                    createAt: webhooks.createAt,
+                    createdAt: webhooks.createdAt,
                 })
                 .from(webhooks)
                 .where(cursor ? lt(webhooks.id, cursor): undefined)

@@ -6,7 +6,7 @@ import { webhooks } from '@/db/schema';
 import { db } from '@/db';
 
 export const getWebhook: FastifyPluginAsyncZod  = async (app) => {
-    app.get('/api/webhooks:id', 
+    app.get('/api/webhooks/:id', 
         {
             schema: {
                 summary: "Get a specific webhook by ID",

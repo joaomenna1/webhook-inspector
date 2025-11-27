@@ -11,7 +11,6 @@ export function Badge({ className, ...props }: BadgeProps) {
         className,
       )}
       {...props}
-    >
-    </span>
+    ></span>
   )
 }

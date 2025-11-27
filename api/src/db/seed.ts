@@ -236,11 +236,13 @@ function generateStripeHeaders() {
 async function seed() {
   console.log("🌱 Iniciando seed do banco de dados...");
 
+  await db.delete(webhooks);
+
   try {
     const webhookData = Array.from({ length: 65 }, () => {
       const eventType = faker.helpers.arrayElement(stripeEvents);
       const event = generateStripeEvent(eventType);
-      const body = JSON.stringify(event);
+      const body = JSON.stringify(event, null, 2);
       const headers = generateStripeHeaders();
 
       return {
